@@ -11,9 +11,10 @@ This plugin allows Neovim users to preview Markdown files as PDFs using Pandoc a
 
 Set global variables in your `init.lua` or `.vimrc` to configure the plugin:
 
+Example of configuration for For Neovim's init.lua
 ```lua
--- Example of configuration for For Neovim's init.lua
-vim.g.markdown_preview_pdf_viewer = "zathura"  -- Replace with your preferred PDF viewer
+-- Replace with your preferred PDF viewer
+vim.g.markdown_preview_pdf_viewer = "zathura"
 
 -- since I use a bibliography file, I need to set the path to it
 local function set_bibliography_path()

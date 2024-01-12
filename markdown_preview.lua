@@ -34,6 +34,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     end,
 })
 
-vim.api.nvim_create_user_command("StartMdPreview", MarkdownPreview.startPreview, {})
+vim.api.nvim_create_user_command("MdPreview", MarkdownPreview.startPreview, {})
 
 return MarkdownPreview
