@@ -18,7 +18,7 @@ Simply add the following to your favorite plugin manager:
 Then use the command `:MdPreview` to compile the current Markdown file to PDF and open it with the configured PDF viewer.
 
 Zathura is the default PDF viewer, but you can change it by setting the global variable `markdown_preview_pdf_viewer` to your preferred PDF viewer.
-I have only tested this plugin with Zathura, so I can't guarantee that it will work with other PDF viewers. But it should work with any PDF viewer that can open a PDF file from the command line using `<pdf_viewer> <pdf_file>`
+I have only tested this plugin with Zathura, so I can't guarantee that it will work with other PDF viewers. But it should work with any PDF viewer that can open a PDF file from the command line using `<pdf_viewer> <pdf_file>`.
 
 ## Configuration
 
@@ -29,7 +29,7 @@ Example of configuration for For Neovim's init.lua
 -- Replace with your preferred PDF viewer
 vim.g.markdown_preview_pdf_viewer = "zathura"
 
--- since I use a bibliography file, I need to set the path to it
+-- Since I use a bibliography file, I need to set the path to it
 local function set_bibliography_path()
     local file_path = vim.fn.expand('%:p')
     local file_dir = vim.fn.fnamemodify(file_path, ':h')
