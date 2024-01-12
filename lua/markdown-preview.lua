@@ -1,4 +1,4 @@
-local MarkdownPreview = {}
+local M = {}
 
 local function getGlobalConfig()
     return {
@@ -20,7 +20,7 @@ local function openPDF(config)
     os.execute(config.pdfViewer .. " " .. vim.fn.shellescape(pdfPath) .. " &")
 end
 
-function MarkdownPreview.startPreview()
+function M.startPreview()
     local config = getGlobalConfig()
     compileMarkdownToPDF(config)
     openPDF(config)
@@ -34,6 +34,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     end,
 })
 
-vim.api.nvim_create_user_command("MdPreview", MarkdownPreview.startPreview, {})
+vim.api.nvim_create_user_command("MdPreview", M.startPreview, {})
 
-return MarkdownPreview
+return M
