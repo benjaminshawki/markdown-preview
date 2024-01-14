@@ -1,3 +1,5 @@
+# IMPORTANT NOT WORKING YET - STILL IN DEVELOPMENT
+
 # Neovim Markdown Preview Plugin
 
 This plugin allows Neovim users to preview Markdown files as PDFs using Pandoc and a configurable PDF viewer.
